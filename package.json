@@ -1,7 +1,29 @@
 {
   "name": "ginx-react-text-editor",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "description": "Ginx React Text Editor is a React component for editing text in React. Its simple and easy to use.",
+  "author": {
+    "name": "Bismark Okletey",
+    "email": "bismarkokleteyamanor@gmail.com"},
+    "keywords": [
+      "react",
+      "text",
+      "editor",
+      "ginx",
+      "rich text editor",
+      "react text editor",
+      "react-text-editor"
+    ],
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "files": [
+      "dist",
+      "README.md"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/bismarkokletey/ginx-react-text-editor.git"},
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -13,7 +35,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rimraf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -34,5 +56,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "mkdirp": "^1.0.4",
+    "rimraf": "^3.0.2"
   }
 }
